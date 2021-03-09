@@ -28,5 +28,5 @@ dependencies {
     implementation project(':circularrangeslider')
 
     //external library for color picker
-    compile 'com.github.QuadFlask:colorpicker:0.0.13'
+//    compile 'com.github.QuadFlask:colorpicker:0.0.13'
 }

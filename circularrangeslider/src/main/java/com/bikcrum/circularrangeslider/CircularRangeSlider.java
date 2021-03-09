@@ -135,7 +135,7 @@ public class CircularRangeSlider extends View {
             max = 3;
         }
         this.max = max;
-        stepsGap = 360f / max;
+        stepsGap = 720f / max;
 
         if (endIndex >= max) {
             endIndex = max - 2;
@@ -357,7 +357,7 @@ public class CircularRangeSlider extends View {
             endIndex = max - 1;
         }
 
-        stepsGap = 360f / max;
+        stepsGap = 720f / max;
 
         switch (startFrom) {
             case Gravity.TOP:
@@ -503,7 +503,7 @@ public class CircularRangeSlider extends View {
         //sector
         float sweepAngle;
         if (startThumbAngle >= endThumbAngle) {
-            sweepAngle = 360 - startThumbAngle + endThumbAngle;
+            sweepAngle = 720 - startThumbAngle + endThumbAngle;
         } else {
             sweepAngle = endThumbAngle - startThumbAngle;
         }
@@ -648,9 +648,9 @@ public class CircularRangeSlider extends View {
         float angleFloor = ((int) Math.floor(angle / stepsGap)) * stepsGap;
 
         if (Math.abs(angle - angleCeil) < Math.abs(angle - angleFloor)) {
-            return angleCeil < 0 ? angleCeil + 360 : angleCeil;
+            return angleCeil < 0 ? angleCeil + 720 : angleCeil;
         } else {
-            return angleFloor < 0 ? angleFloor + 360 : angleFloor;
+            return angleFloor < 0 ? angleFloor + 720 : angleFloor;
         }
 
     }
